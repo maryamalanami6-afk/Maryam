@@ -1,1 +1,44 @@
+# ==============================================================================
+# EXECUTION & TESTING AREA (POLYMORPHISM IN ACTION)
+# ==============================================================================
+if name == "__main__":
+    print("--- Creating Objects ---")
+    
+    # 1. Instantiate a Student object
+    student1 = Student(
+        name="Mariam", 
+        age=21, 
+        email="mariam@university.edu", 
+        student_id="S12345", 
+        major="Computer Science"
+    )
+    
+    # 2. Instantiate a Teacher object
+    teacher1 = Teacher(
+        name="Dr. Al-Anami", 
+        age=45, 
+        email="alanami@university.edu", 
+        employee_id="T9876", 
+        department="Information Technology", 
+        salary=15000
+    )
 
+    print("\n--- Performing Actions ---")
+    # Interacting with Student-specific features
+    student1.add_grade(95)
+    student1.add_grade(88)
+    student1.add_grade(100)
+    
+    # Interacting with Teacher-specific features
+    teacher1.assign_course("Advanced Networking")
+    teacher1.assign_course("Object-Oriented Programming")
+
+    print("\n--- Displaying Overridden Profiles ---")
+    # Both objects use the same method name, but execute their own custom code
+    student1.display_profile()
+    teacher1.display_profile()
+
+    print("\n--- Demonstrating Inherited Parent Method ---")
+    # Deactivate account belongs strictly to Person, but both child classes can use it!
+    student1.deactivate_account()
+    student1.display_profile()
