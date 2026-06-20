@@ -1,2 +1,14 @@
-hello GitHub
-my  first file
+# Function to calculate salary
+basic_salary = 10000
+bonus = 1500
+deductions = 500
+
+# Calculation
+net_salary = basic_salary + bonus - deductions
+
+# Print the results
+print("Basic Salary: ", basic_salary)
+print("Bonus:        ", bonus)
+print("Deductions:   ", deductions)
+print("-----------------------")
+print("Net Salary:   ", net_salary)
